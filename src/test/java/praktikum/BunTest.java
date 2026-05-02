@@ -9,18 +9,20 @@ public class BunTest {
 
     String name = "Bun";
     float price = 3.14f;
+    Bun bun;
+
+    @BeforeEach
+    void setUp() {
+        bun = new Bun(name, price);
+    }
 
     @Test
     public void getNameTest() {
-        Bun bun = new Bun(name, price);
-
         assertEquals(name, bun.getName());
     }
 
     @Test
     public void getPriceTest() {
-        Bun bun = new Bun(name, price);
-
         assertEquals(price, bun.getPrice());
     }
 
